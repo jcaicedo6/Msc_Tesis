@@ -1,0 +1,93 @@
+\documentclass[letterpaper,12pt,oneside]{book}
+%\usepackage[a4paper,includeall,bindingoffset=0cm,margin=2cm,marginparsep=0cm,marginparwidth=0cm]{geometry}
+\usepackage[top=1in, left=0.9in, right=1.25in, bottom=1in]{geometry}
+\usepackage{ThesisMartinIPN}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tocloft}
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{slashed}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{ifoddpage}
+
+\urlstyle{same}
+\usepackage[titletoc]{appendix}
+
+\hypersetup{
+   colorlinks=true,
+   urlcolor=cyan,
+   linkcolor=black,
+   citecolor=black,
+   filecolor=magenta,
+   pdftitle={Sharelatex Example},
+   pdfpagemode=FullScreen,
+}
+\usepackage[style=numeric, sorting=none]{biblatex}
+\addbibresource{sample.bib}
+%\usepackage[natbibapa]{apacite}
+%\usepackage[round]{natbib}
+
+%\renewcommand\cftsecpresnum{\S}
+%\renewcommand\cftsubsecpresnum{\S}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modificación de la plantilla original de esta url: 
+% https://es.overleaf.com/latex/templates/tesis-unam-ingenieria-energia/kfffjrxcckdp
+
+% Adaptada por Martin Moreno Guzmán para el CICATA-IPN.
+% Cualquier sugerencia, corrección o comentario a: mmorenog1500@alumno.ipn.mx
+
+% A continuación los comentarios de la plantilla original:
+
+% Comparto una plantilla para la PORTADA que use en mi tesis
+% Modificar el archivo de portada. tex
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.2}
+%\usepackage{biblatex}
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.1.0}
+
+
+\begin{document}
+
+\frontmatter
+\include{Pretexto/portada}
+\include{Pretexto/agradecimientos}
+\include{Pretexto/frontmater}
+\include{Pretexto/abstract}
+
+
+\mainmatter
+
+\include{Intro/intro}
+\include{Ch1/ch1}
+\include{Ch2/ch2}
+\include{Ch3/ch3}
+\include{Ch4/ch4}
+\include{Ch5/Ch5}
+\include{appendix/appendix}
+
+
+
+%\bibliography{References/sample.bib}
+%\include{References}
+%\bibliographystyle{apacite}
+%\bibliography{sample}
+\printbibliography{}
+\end{document}
